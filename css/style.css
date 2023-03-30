@@ -1950,6 +1950,7 @@ html {
           backdrop-filter: blur(21.5px);
   padding-bottom: 40px;
   overflow: hidden;
+  z-index: 2;
 }
 
 .first::after {
@@ -1977,11 +1978,12 @@ html {
 }
 
 .first__bg-wrap-img {
-  position: fixed;
+  position: absolute;
   width: calc(100% + 200px);
   height: 100%;
   top: 0;
   margin-left: -100px;
+  z-index: 1;
 }
 
 .first__bg-wrap {
@@ -2773,6 +2775,8 @@ html {
 }
 
 .bunner-text {
+  position: relative;
+  z-index: 2;
   background-color: black;
 }
 
@@ -3189,6 +3193,12 @@ html {
   .innovation__item-text {
     line-height: calc(0.75rem + 0.5 * (100vw - 47.9375rem) / 14);
   }
+}
+
+.display {
+  position: relative;
+  z-index: 2;
+  background-color: white;
 }
 
 @supports (padding-top: clamp( 3.125rem , 2.5480769231rem  +  2.5641025641vw , 5.625rem )) {
@@ -4959,7 +4969,7 @@ html {
 
 .picture-block {
   position: relative;
-  width: 50%;
+  max-width: 50%;
   padding-top: 30%;
 }
 
